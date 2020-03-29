@@ -8,5 +8,13 @@ Rails.application.routes.draw do
   end
 
 
+  namespace :api do 
+    namespace :v1 do 
+      
+      scope :widgets do 
+        get '/visible', to: "widgets#visible", as: :visible
+      end
+    end
+  end
 
 end
