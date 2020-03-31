@@ -32,4 +32,5 @@
 en:
   request:
     success: "success"
+    error: "error"
   
