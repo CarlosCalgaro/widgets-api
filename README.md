@@ -23,9 +23,10 @@ Installing the gems of the project
  bundle install
 ```
 
-Add your tokens to rails credentials
+Regenerate credentials file and add your tokens to rails credentials
 
 ```
+ rm config/credentials.yml.enc
  EDITOR="vim" rails credentials:edit
 ```
 
