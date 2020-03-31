@@ -1,24 +1,34 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Environment Config
+ 
+ Ruby  version: ruby 2.6.3p62
+ Rails version: Rails 5.2.4.2
 
-Things you may want to cover:
+# Setup
 
-* Ruby version
+Download the project
+```
+ git clone -b master git@github.com:CarlosCalgaro/widgets-api.git
+```
+Install the gems
+```
+ bundle install
+```
+Add the credentials
+```
+ EDITOR="vim" rails credentials:edit
+```
+The credentials file should have this structure 
+```YML
+showoff:
+        client_id: <client_id>
+        client_secret: <client_secret>
+secret_key_base: <secret_key_base>
+```
 
-* System dependencies
+Run the server 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+rails s
+```
