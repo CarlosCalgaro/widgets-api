@@ -42,3 +42,23 @@ rails s
 ```
 
 If everything went correct, you should see your application running at the url http://localhost:3000
+
+
+### Deploying to Heroku
+Using the heroku client
+
+In the source code directory. Create the heroku app
+```
+heroku create
+```
+
+Deploy your code using heroku's branch
+
+```
+git push heroku master
+```
+
+open the API
+```
+heroku open
+```
