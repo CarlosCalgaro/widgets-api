@@ -6,14 +6,6 @@ class Tokens::CreateService
         password = token_params[:password]
         response = connector.authenticate(username, password)
         return response
-        # binding.pry
-        # if response.success?
-        #     user = User.from_email(username)
-        #     token = response.body[:token]
-        #     return token 
-        # else 
-
-        # end
     end
 
 

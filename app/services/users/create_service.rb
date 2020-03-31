@@ -1,9 +1,7 @@
 class Users::CreateService
 
   def perform(params = {})
-    response = connector.create(params)
-    
-    
+    response = connector.create(params.to_h)
   end
   
   private
