@@ -14,7 +14,6 @@ class TokensController < ApplicationController
     def revoke
         service = Tokens::RevokeService.new
         resp = service.perform(revoke_token_params[:token])
-        # binding.pry
         @data = resp.body
         if resp.success?
             render_success

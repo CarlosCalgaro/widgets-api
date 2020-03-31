@@ -1,7 +1,7 @@
 class Widgets::VisibleService
     
-    def perform(token)  
-        return connector(token).visible
+    def perform(term, token)  
+        return connector(token).visible(term)
     end
 
     private
