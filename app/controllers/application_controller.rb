@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::API
     
-    def render_success(status: :ok)
-        @message= I18n.t("request.success")
+    private
+    def render_success(message: "", status: :ok)
+        @message = message.blank? ? I18n.t("request.success") : message
         @code = ApiStatusCodes::SUCCESS
         render status: status
     end
@@ -14,6 +15,6 @@ class ApplicationController < ActionController::API
 
     def current_token
         return "" if !request.headers['Authorization'].present?
-        @token ||= request.headers['Authorization'].split(' ').last
+        return request.headers['Authorization'].split(' ').last
     end
 end
